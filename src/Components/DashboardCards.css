@@ -1,102 +1,157 @@
-.dashboard-page{
+.dashboardCardsContainer{
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:30px;
-    padding:40px;
+    gap:24px;
+    margin:40px auto;
+    width:fit-content;
+    font-family:'Inter',sans-serif;
 }
 
-.dashboard-card{
-    width:500px;
-    height:470px;
-    background:#F6F3FB;
-    border-radius:20px;
-    padding:30px;
-    display:flex;
-    flex-direction:column;
+/* ===========================
+        BOTH CARDS
+=========================== */
+
+.dashboardRecentCard,
+.dashboardApprovalCard{
+    width:360px;
+    height:280px;
+    background:#F7F5FD;
+    border-radius:12px;
+    padding:18px;
+    box-sizing:border-box;
 }
 
-.card-header{
+/* ===========================
+        HEADER
+=========================== */
+
+.dashboardCardHeader{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:32px;
+    margin-bottom:18px;
 }
 
-.card-header h2{
-    font-size:26px;
-    font-weight:700;
-    color:#171717;
-}
-
-.card-header span{
-    color:#8B5CF6;
-    font-size:18px;
+.dashboardCardHeader h2{
+    margin:0;
+    font-size:16px;
     font-weight:600;
+    color:#171717;
+    line-height:24px;
+}
+
+.dashboardCardHeader span{
+    font-size:12px;
+    font-weight:500;
+    color:#7C4DFF;
     cursor:pointer;
 }
 
-.activity-list{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
+/* ===========================
+    RECENT ACTIVITIES
+=========================== */
 
-.activity-list li{
-    display:flex;
-    align-items:center;
-    margin-bottom:28px;
-}
-
-.activity-list p{
-    flex:1;
-    margin:0;
-    font-size:17px;
-    color:#2B2B2B;
-}
-
-.dot{
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#8B5CF6;
-    margin-right:18px;
-    flex-shrink:0;
-}
-
-
-.activity-list small{
-    text-align:right;
-    color:#8F8F8F;
-    font-size:15px;
-}
-
-.approval{
+.dashboardActivityList{
     display:flex;
     flex-direction:column;
-    gap:28px;
-    flex:1;
+    gap:14px;
 }
 
-.approval-item{
+.dashboardActivityRow{
+    display:grid;
+    grid-template-columns:8px 1fr 88px;
+    align-items:center;
+    column-gap:12px;
+}
+
+.dashboardDot{
+    width:6px;
+    height:6px;
+    background:#7C4DFF;
+    border-radius:50%;
+}
+
+.dashboardActivityText{
+    margin:0;
+    font-size:12px;
+    font-weight:400;
+    color:#2B2B2B;
+    line-height:16px;
+}
+
+.dashboardActivityDate{
+    font-size:11px;
+    font-weight:400;
+    color:#8F8F8F;
+    text-align:right;
+    white-space:nowrap;
+}
+
+/* ===========================
+    PENDING APPROVALS
+=========================== */
+
+.dashboardApprovalList{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    margin-top:20px;
+}
+
+
+.dashboardApprovalRow{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.approval-item p{
-    margin:0;
-    font-size:20px;
-    color:#2B2B2B;
+.dashboardApprovalLeft{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
-.approval-item button{
-    width:125px;
-    height:40px;
+/* Icon Box */
+
+.dashboardApprovalIcon{
+    width:30px;
+    height:30px;
+    padding:6px;
+    background:#F2ECFC;
+    border-radius:6px;
+    object-fit:contain;
+    box-sizing:border-box;
+}
+
+
+.dashboardApprovalItem{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:36px;
+}
+
+.dashboardApprovalTitle{
+    margin:0;
+    width:200px;          /* Same width as Recent Activities text */
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    font-weight:400;
+    line-height:16px;
+    color:#2B2B2B;
+    text-align:left;      /* Force left alignment */
+}
+
+.dashboardApprovalButton{
+    width:82px;
+    height:24px;
     border:none;
-    border-radius:12px;
-    background:#EFE7FB;
-    color:#8B5CF6;
-    font-size:15px;
+    border-radius:8px;
+    background:#EEE8FC;
+    color:#7C4DFF;
+    font-family:'Inter', sans-serif;
+    font-size:10px;
     font-weight:600;
+    cursor:pointer;
 }
