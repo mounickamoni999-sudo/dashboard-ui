@@ -1,9 +1,9 @@
 import "./DashboardCards.css";
 
-import leaveIcon from "../assets/Group.png";
-import assessmentIcon from "../assets/Vector.png";
-import certificateIcon from "../assets/Vector (1).png";
-import transferIcon from "../assets/Vector (2).png";
+import leaveIcon from "../assets/leave request.png";
+import assessmentIcon from "../assets/assessment evaluation.png";
+import certificateIcon from "../assets/certificate requests.png";
+import transferIcon from "../assets/course transfer.png";
 
 function DashboardCards() {
   return (
